@@ -20,7 +20,6 @@
 // console.log(NaN > 0); // false
 // console.log(NaN < 0); // false
 
-// console.log("hitesh" > "Hitesh"); // true (based on unicode values)
 
 // === 
 console.log('2' == 2); // true (loose equality, type conversion happens)
