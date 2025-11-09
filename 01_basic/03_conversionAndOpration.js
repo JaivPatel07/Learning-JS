@@ -15,7 +15,7 @@ let valueInNumber = Number(score)
 let isLoggedIn = NaN
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-console.log(booleanIsLoggedIn);
+// console.log(booleanIsLoggedIn);
 
 // 1 => true; 0 => false
 // "" => false
@@ -80,3 +80,14 @@ let gameCounter = 100
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+
+let a = 1;// we 
+let b = 0;
+
+a &&= 2; // it will check the left side is true or not, if true then only assign the value on right side (a is 1, which is true so 2 will be assigned to a)
+console.log(a);
+// Expected output: 2
+
+b &&= 2;
+console.log(b);
+// Expected output: 0
