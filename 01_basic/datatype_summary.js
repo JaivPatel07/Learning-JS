@@ -1,5 +1,4 @@
 //  Primitive
-
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
 const score = 100
@@ -37,3 +36,24 @@ console.log(typeof myFunction); // function // special type of object // functio
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// stack(primitive)  &  heap(Non primitive)   memory 
+// premitive make duplicate and assign value
+let a=10
+let b=a
+b=20 // only b change
+console.log(a) //10
+console.log(b) //20
+
+// in non primitive memory store reference so on updation val will change
+
+let first={
+    rn:1,
+    mob:11111
+}
+let sec=first
+sec.mob=22222// here first will change
+sec.rn=5
+console.log(first.mob);
+console.log(first.rn);
+
