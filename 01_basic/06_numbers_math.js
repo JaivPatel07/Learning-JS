@@ -14,6 +14,7 @@ const balance = new Number(100)
 // console.log(balance.toString().length);
 // console.log(balance.toFixed(1));//100.0
 // console.log(balance.toFixed(2));//100.00
+// console.log(balance.toFixed(3));//100.000
 
 const otherNumber = 123.8966
 // console.log(otherNumber.toPrecision(4));//123.9
