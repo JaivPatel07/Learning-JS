@@ -91,30 +91,31 @@ console.log(users[1].email); // Output: a@gmail.com
 const course = {
     coursename: "js in hindi",
     price: "999",
-    courseInstructor: "jaiv"
+    courseInstructor: "hitesh"
 }
 
 // Destructuring allows you to unpack values from objects into distinct variables.
 // It makes the code cleaner and shorter.
 
 // Here, we extract 'courseInstructor' from the 'course' object and assign it to a new variable called 'instructor'.
-const {courseInstructor: instructor} = course
+const {courseInstructor: instructor} = course //
+console.log(instructor); // Output: hitesh
 
-// console.log(courseInstructor); // This would cause an error because courseInstructor is not defined in this scope.
-console.log(instructor); // Output: jaiv
+const {courseInstructor} = course //This is also velid
+console.log(courseInstructor); // Output: hitesh
 
 // --- JSON Format ---
 // APIs often return data in JSON (JavaScript Object Notation) format.
 // It looks very similar to JavaScript object literals, but the keys must be strings in double quotes.
 // {
-//     "name": "jaiv",
+//     "name": "hitesh",
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
 
 // Sometimes, an API will return an array of objects in JSON format.
-[
-    {},
-    {},
-    {}
-]
+// [
+//     {},
+//     {},
+//     {}
+// ]
