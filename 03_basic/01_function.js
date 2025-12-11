@@ -104,3 +104,78 @@ function returnSecondValue(getArray) {
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
+
+// =================================================================
+// Function Expressions
+// =================================================================
+// You can also define a function inside an expression and assign it to a variable.
+// This is known as a function expression. Unlike function declarations, these are not hoisted.
+
+const add = function(num) {
+    return num + 2;
+}
+
+// You call it just like a regular function.
+// console.log(add(5)); // Output: 7
+
+
+// =================================================================
+// Arrow Functions (ES6)
+// =================================================================
+// Arrow functions provide a more concise syntax for writing function expressions.
+
+// Basic arrow function with an explicit return
+const addTwo = (num1, num2) => {
+    return num1 + num2;
+}
+
+// Arrow function with an "implicit return" (for single-line expressions)
+// The value of the expression is returned automatically without the `return` keyword.
+const addThree = (num1, num2, num3) => num1 + num2 + num3;
+
+// console.log(addThree(1, 2, 3)); // Output: 6
+
+
+// =================================================================
+// Immediately Invoked Function Expressions (IIFE)
+// =================================================================
+// An IIFE is a function that is defined and executed immediately.
+// This is a common pattern to create a local scope and avoid polluting the global namespace.
+
+(function() {
+    // This is a private scope. Variables defined here are not accessible outside.
+    const privateVar = "I am private";
+    console.log("This IIFE ran immediately!");
+    // console.log(privateVar);
+})();
+
+// The syntax looks like: (functionDefinition)(executionCall);
+
+// =================================================================
+// The `this` Keyword and Arrow Functions
+// =================================================================
+// The behavior of the `this` keyword is one of the most important differences between regular functions and arrow functions.
+
+const userProfile = {
+    username: "sam",
+    price: 999,
+
+    // Method using a regular function
+    welcomeMessage: function() {
+        // In a regular function, `this` refers to the object that called the method.
+        // Here, `this` is the `userProfile` object.
+        console.log(`${this.username}, welcome to the website`);
+    },
+
+    // Method using an arrow function
+    goodbyeMessage: () => {
+        // An arrow function does not have its own `this`. It inherits `this` from its parent scope.
+        // In this case, the parent scope is the global scope (e.g., the `window` object in a browser), where `this.username` is undefined.
+        console.log(`${this.username}, thank you for visiting`);
+    }
+};
+
+// userProfile.welcomeMessage(); // Output: sam, welcome to the website
+// userProfile.goodbyeMessage(); // Output: undefined, thank you for visiting
+
+// Key takeaway: Use regular functions for object methods when you need to access the object's properties with `this`.
